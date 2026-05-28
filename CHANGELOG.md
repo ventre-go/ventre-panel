@@ -18,6 +18,15 @@ All notable changes to ventre-panel will be documented in this file.
 - Password redaction in errors and results
 - Password redaction for stdout/stderr/error result fields
 - Chinese and English UI with runtime language switch
+- Desktop Workbench layout (1440x900 default, 1280x800 minimum)
+
+### Changed
+- Shortened English button and tab labels to prevent text overflow
+- Reworked toolbar grouping for stable bilingual two-row layout  
+- Increased main window default and minimum logical size for English text
+- Stabilized layout during language switching with split-offset preservation
+- Adjusted fixed-size wrappers to accommodate longer English labels
+- Simplified status bar summary text for height stability
 - Desktop-optimized Workbench layout for modern HiDPI desktop environments
 - Custom theme with larger fonts and controls for readability
 - ventre-transport integration for all SSH operations

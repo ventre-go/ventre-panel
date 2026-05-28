@@ -23,9 +23,9 @@ func TestZHTranslations(t *testing.T) {
 		{"tab.transfer", "传输"},
 		{"tab.results", "历史结果"},
 		{"tab.run_options", "运行选项"},
-		{"hosts.add", "添加主机"},
-		{"cmd.run", "在选中主机上执行"},
-		{"transfer.upload_btn", "上传到选中主机"},
+		{"hosts.add", "添加"},
+		{"cmd.run", "执行"},
+		{"transfer.upload_btn", "上传"},
 		{"transfer.unsupported", "当前版本仅支持单文件上传和单文件下载，不支持目录传输。"},
 		{"results.no_results", "本次运行暂无结果。"},
 		{"op.test_connection", "连接测试"},
@@ -55,9 +55,9 @@ func TestENTranslations(t *testing.T) {
 		{"tab.command", "Command"},
 		{"tab.transfer", "Transfer"},
 		{"tab.results", "Result History"},
-		{"hosts.add", "Add Host"},
-		{"cmd.run", "Run on Selected Hosts"},
-		{"transfer.upload_btn", "Upload to Selected Hosts"},
+		{"hosts.add", "Add"},
+		{"cmd.run", "Run"},
+		{"transfer.upload_btn", "Upload"},
 		{"op.test_connection", "Connection Test"},
 		{"err.auth_failed", "Authentication failed"},
 		{"err.host_key_failed", "Host key verification failed"},
@@ -211,7 +211,7 @@ func TestInsecureWarningBilingual(t *testing.T) {
 	if enShort == "" || enShort == "options.insecure_warn_short" {
 		t.Fatalf("en-US short insecure warning not translated: %q", enShort)
 	}
-	if !strings.Contains(enShort, "Danger") || !strings.Contains(enShort, "OFF") {
+	if !strings.Contains(enShort, "Host key") || !strings.Contains(enShort, "MITM") {
 		t.Fatalf("en-US short insecure warning must clearly communicate danger: %q", enShort)
 	}
 }

@@ -52,7 +52,7 @@ ventre-panel is a lightweight GUI tool that lets you:
 - Password redaction in UI and results
 - SSH host key verification enabled by default
 - Chinese and English UI with runtime language switch
-- Desktop-optimized Workbench layout (1280x760 default, 1120x680 minimum content size)
+- Desktop-optimized Workbench layout (1440x900 default, 1280x800 minimum content size)
 - All state is in-memory only — nothing is persisted, including language preference
 
 ## No Persistence
@@ -109,7 +109,7 @@ Empty port defaults to 22.
 
 ## Workbench Main Window
 
-The main window is a lightweight Workbench. It opens at `1280 x 760` Fyne logical units, is not full screen, is not maximized, and remains user-resizable. The minimum usable content size is `1120 x 680` logical units. Fyne and the operating system handle HiDPI scaling for 2K/4K displays.
+The main window is a lightweight Workbench. It opens at `1440 x 900` Fyne logical units, is not full screen, is not maximized, and remains user-resizable. The minimum usable content size is `1280 x 800` logical units. Fyne and the operating system handle HiDPI scaling for 2K/4K displays.
 
 - **Top toolbar**: language, operation timeout, host concurrency, known_hosts path, and host key verification override
 - **Left Hosts panel**: in-memory host table without a password column, host counts, Add Host dialog, CSV Import dialog, connection test, delete disabled hosts, clear all

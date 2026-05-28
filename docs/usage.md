@@ -4,7 +4,7 @@
 
 ventre-panel is a stateless desktop GUI for batch SSH operations. It does not save any data between sessions.
 
-The main window opens as a resizable Workbench at `1280 x 760` Fyne logical units. It is not full screen and is not maximized.
+The main window opens as a resizable Workbench at `1440 x 900` Fyne logical units. It is not full screen and is not maximized.
 
 - **Top toolbar**: language, operation timeout, host concurrency, known_hosts path, and host key verification override
 - **Left Hosts panel**: add/import/test/manage in-memory SSH hosts

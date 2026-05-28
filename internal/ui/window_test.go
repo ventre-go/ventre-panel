@@ -179,8 +179,8 @@ func TestConfigureMainWindowUsesWorkbenchSizeWithoutFullscreenOrFixedSize(t *tes
 	}
 
 	size := w.Canvas().Size()
-	if size.Width != 1280 || size.Height != 760 {
-		t.Fatalf("expected default workbench size 1280x760, got %v", size)
+	if size.Width != 1440 || size.Height != 900 {
+		t.Fatalf("expected default workbench size 1440x900, got %v", size)
 	}
 }
 
@@ -222,7 +222,7 @@ func TestHostTableHeadersDoNotIncludePassword(t *testing.T) {
 
 func TestHostTableColumnWidthsAreReadable(t *testing.T) {
 	widths := hostTableColumnWidths()
-	want := []float32{56, 170, 72, 130, 140}
+	want := []float32{60, 190, 80, 150, 150}
 	if len(widths) != len(want) {
 		t.Fatalf("expected %d column widths, got %d", len(want), len(widths))
 	}
@@ -575,7 +575,7 @@ func TestNonZeroExitCodeDisplaysAsCommandResultNotTransportError(t *testing.T) {
 
 func TestStatusSummaryText(t *testing.T) {
 	loc := i18n.NewLocale()
-	if got := statusSummaryText(loc, runSummary{}, false); got != "尚无结果。执行命令、上传或下载后，可在这里查看摘要。" {
+	if got := statusSummaryText(loc, runSummary{}, false); got != "尚无结果。" {
 		t.Fatalf("unexpected empty status text: %q", got)
 	}
 
@@ -586,7 +586,7 @@ func TestStatusSummaryText(t *testing.T) {
 
 	loc.Set(i18n.EN)
 	done := statusSummaryText(loc, runSummary{Operation: session.OpDownload, Total: 3, Success: 2, Failure: 1}, true)
-	if done != "Last operation: download | total 3 | success 2 | failed 1 | running 0" {
+	if done != "Last: download | total 3 | success 2 | failed 1 | running 0" {
 		t.Fatalf("unexpected done status text: %q", done)
 	}
 }
@@ -604,8 +604,8 @@ func TestTopBarUsesGroupedReadableControls(t *testing.T) {
 			t.Fatalf("top toolbar missing group label %q", state.T(key))
 		}
 	}
-	if topBar.MinSize().Height < 72 {
-		t.Fatalf("expected two-row toolbar min height to be at least 72, got %.0f", topBar.MinSize().Height)
+	if topBar.MinSize().Height < 100 {
+		t.Fatalf("expected stable toolbar min height to be at least 100, got %.0f", topBar.MinSize().Height)
 	}
 }
 
